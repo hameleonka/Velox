@@ -43,7 +43,6 @@ ol, ul {
     background: url("../img/home-background.jpg") no-repeat;
     background-size: cover;
     background-position: center;
-    /*min-height:711px ;*/
 }
 
 .content-centerer {
@@ -54,62 +53,100 @@ ol, ul {
 
 .main-navigation {
     padding-top: 1.5rem;
-    /*margin-top: 24px;*/
 }
 
 .navigation-logo {
     float: left;
+    width: 8.125rem;
 }
 
 .navigation-logo img {
     max-width: 100%;
 }
 
-.main-navigation ul {
+.main-navigation .menu-desktop {
     float: right;
-    font: 0.874rem "OpenSans Semibold", sans-serif;
-    /*font: 14px "OpenSans Semibold", sans-serif;*/
+    font: 0.874rem "Open Sans Semi-Bold", sans-serif;
 }
-.main-navigation ul li {
+
+.main-navigation .menu-desktop li {
     display: inline-block;
     margin-right: 4.4285em;
     border-bottom: 1px solid transparent;
-    /*margin-right: 62px;*/
 }
 
-.main-navigation ul li:last-child {
+.main-navigation .menu-desktop li:last-child {
     margin-right: 0;
 }
 
-.main-navigation ul li a {
+.main-navigation .menu-desktop li a {
     display: block;
     text-decoration: none;
     color: #ffffff;
-    padding-top: 1em;
-    padding-bottom: 0.8571em;
-    /*padding-top: 14px;*/
-    /*padding-bottom: 12px;*/
+    padding-top: 0.874rem;
+    padding-bottom: 0.7491rem;
 }
 
-.main-navigation ul li:hover {
+.main-navigation .menu-desktop li:hover {
     border-bottom: 1px solid #ffffff;
 }
 
+.menu-icon {
+    display: inline-block;
+    display: none;
+    float: right;
+    width: 5vh;
+    height: 5vh;
+    background: url(../img/menu-icon.png) center no-repeat;
+}
+
+.menu-wrapper {
+    display: none;
+    position: absolute;
+    right: 3.5vh;
+    top: 0vh;
+    width: 30%;
+    padding-top: 7vh;
+    z-index: 100;
+}
+
+.menu-wrapper .menu-mobile {
+    display: none;
+    padding: 3px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    background: #9599a2;
+}
+
+.menu-wrapper li {
+    display: block;
+    margin-right: 0;
+    font: 1.3rem "Open Sans Semi-Bold", sans-serif;
+    padding: 1em 0;
+}
+
+.menu-wrapper li a {
+    /*font: 0.874rem "Open Sans Semi-Bold", sans-serif;*/
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .home-content {
-    margin-top:13.6875rem;
+    margin-top: 13.6875rem;
     text-align: center;
     color: #ffffff;
 }
 
 .home-content h1 {
-    font: 58px "Lora Bold", sans-serif;
+    font: 3.625rem "Lora Bold", serif;
     margin-bottom: 0.6045em;
-    /*margin-bottom: 35px;*/
 }
 
 .home-content p {
-    font: 25px "Open Sans", sans-serif;
-    margin-bottom: 89px;
+    font: 1.5625rem "Open Sans", sans-serif;
+    margin-bottom: 3.56em;
 }
 
 .btn {
@@ -120,31 +157,25 @@ ol, ul {
     text-decoration: none;
 }
 
-.getStartedBtn{
-    font: 1.5625rem "OpenSans Semibold", sans-serif;
+.getStartedBtn {
+    font: 1.5625rem "Open Sans Semi-Bold", sans-serif;
     padding: 0.86em 0;
-    width:12.8em;
+    width: 12.8em;
     text-transform: capitalize;
     margin-bottom: 9.375rem;
     box-shadow: 0px 2px 4.75px 0.25px rgba(0, 0, 0, 0.25);
-    /*padding: 21.5px 0;*/
-    /*width:320px;*/
-    /*background-color: #00a5ff;*/
-    /*font: 25px "OpenSans Semibold", sans-serif;*/
 }
 
 #services, #portfolio, #testimonials, .feedbacks {
-    padding-top:2.875rem;
-    /*padding-top:46px;*/
+    padding-top: 2.875rem;
     text-align: center;
 }
 
 .block-header {
     text-transform: uppercase;
-    font: 2.604375rem "Lora Bold", sans-serif;
+    font: 2.604375rem "Lora Bold", serif;
     color: #3a3f4b;
     margin-bottom: 0.719942em;
-    /*margin-bottom: 30px;*/
 }
 
 .header-underline {
@@ -152,37 +183,33 @@ ol, ul {
     height: 4px;
     background-color: #00a5ff;
     margin: 0 auto;
-    /*width: 146px;*/
 }
 
 .services-block {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin: 0 auto;
     margin-top: 6.1875rem;
-    margin-bottom: 6.0625rem;
-    /*margin-top: 99px;*/
-    /*margin-bottom: 97px;*/
+    margin-bottom: 4.0625rem;
 }
 
 .service-item {
     width: 21.5569%;
     text-align: center;
-    /*width: 252px;*/
+    margin-bottom: 2rem;
 }
 
 .service-item-icon {
-    width:5.0625rem;
-    height:5.0625rem;
+    width: 5.0625rem;
+    height: 5.0625rem;
     background-color: #dddfe3;
     border-radius: 50%;
     margin: 0 auto;
     margin-bottom: 1.125rem;
     text-align: center;
     font-size: 0;
-    /*width:81px;*/
-    /*height:81px;*/
-    /*margin-bottom: 18px;*/
 }
 
 .centerer {
@@ -199,17 +226,14 @@ ol, ul {
 
 .cls-1 {
     fill-rule: evenodd;
-    color:#0095ff;
+    color: #0095ff;
 }
 
-
 .service-item h3 {
-    font: 1.125rem "SansPro Semibold", sans-serif;
+    font: 1.125rem "Source Sans Pro Semi-Bold", sans-serif;
     text-transform: uppercase;
     color: #3a3f4b;
     margin-bottom: 1.055555em;
-    /*font: 18px "SansPro Semibold", sans-serif;*/
-    /*margin-bottom: 19px;*/
 }
 
 .service-item-underline {
@@ -217,16 +241,13 @@ ol, ul {
     height: 2px;
     background-color: #888888;
     margin: 0 auto;
-    /*width: 41px;*/
 }
+
 .service-item p {
-    font: 0.75rem "OpenSans Light", sans-serif;
+    font: 0.75rem "Open Sans Light", sans-serif;
     color: #999999;
     margin-top: 1.5833em;
     line-height: 1.6666em;
-    /*font: 12px "OpenSans Light", sans-serif;*/
-    /*margin-top: 19px;*/
-    /*line-height: 20px;*/
 }
 
 #portfolio {
@@ -234,19 +255,15 @@ ol, ul {
 }
 
 .portfolio-navigation ul {
-    font: 0.874rem "OpenSans Semibold", sans-serif;
-    /*font: 14px "OpenSans Semibold", sans-serif;*/
+    font: 0.874rem "Open Sans Semi-Bold", sans-serif;
     margin: 0 auto;
     margin-top: 3.9375rem;
     margin-bottom: 2.46875rem;
-    /*margin-top: 63px;*/
-    /*margin-bottom: 39.5px;*/
 }
 
 .portfolio-navigation ul li {
     display: inline-block;
     margin-right: 4.07143em;
-    /*margin-right: 57px;*/
 }
 
 .portfolio-navigation ul li:last-child {
@@ -258,7 +275,6 @@ ol, ul {
     text-decoration: none;
     color: #999999;
     padding-bottom: 0.75em;
-    /*padding-bottom: 10.5px;*/
     border-bottom: 1px solid #f1f2f3;
 }
 
@@ -271,13 +287,13 @@ ol, ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-bottom: 46px;
+    margin-bottom: 2.875rem;
 }
 
 .portfolio-item {
     width: 32.4786%;
     max-width: 380px;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
     text-decoration: none;
     text-align: left;
     box-shadow: 0px 2px 4.9px 0.1px rgba(0, 0, 0, 0.15);
@@ -288,25 +304,20 @@ ol, ul {
 }
 
 .portfolio-item-header {
-    font: 1.125rem "OpenSans Semibold", sans-serif;
-    /*font: 18px "OpenSans Semibold", sans-serif;*/
+    font: 1.125rem "Open Sans Semi-Bold", sans-serif;
     color: #999999;
-    padding: 29px 0;
-    padding-left: 34px;
+    padding: 1.6111em 0;
+    padding-left: 1.8888em;
     text-transform: capitalize;
 }
 
 .showMoreBtn {
     width: 11.16em;
-    font: 1.5625rem "OpenSans Semibold", sans-serif;
+    font: 1.5625rem "Open Sans Semi-Bold", sans-serif;
     padding: 0.92em 0;
     text-transform: uppercase;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 5rem;
-    /*padding: 23px 0;*/
-    /*width: 279px;*/
-    /*font: 25px "OpenSans Semibold", sans-serif;*/
-    /*margin-bottom: 80px;*/
 }
 
 .brands-block {
@@ -314,14 +325,14 @@ ol, ul {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
     margin-top: 4.625rem;
-    margin-bottom: 7.8125rem;
-    /*margin-top: 74px;*/
-    /*margin-bottom: 125px;*/
+    margin-bottom: 5.8125rem;
 }
 
 .brand-icon {
     width: 12.3932%;
+    margin-bottom: 2rem;
 }
 
 .brand-icon img {
@@ -341,22 +352,30 @@ ol, ul {
     justify-content: space-between;
     align-items: center;
     margin-top: 3.5625rem;
-    /*width: 1114px;*/
 }
 
 .feedbacks-block {
     position: relative;
-    width:52.2442%;
+    width: 52.2442%;
     margin: 0 auto;
-    /*min-width:582px;*/
 }
 
 .feedback {
-    display: none;
+   display: none;
 }
 
-.feedback-carusel .current-feedback {
+.former-feedback{
     display:block;
+    visibility: hidden;
+}
+
+.former-feedback .feedback-img{
+    margin-bottom: 3.125rem;
+}
+
+
+.feedback-carusel .current-feedback {
+    display: block;
     -webkit-animation: feedback-animation 1s;
     animation: feedback-animation 1s;
 }
@@ -368,31 +387,25 @@ ol, ul {
 .current-feedback .feedback-img {
     width: 23.1959%;
     margin: 0 auto;
-    margin-bottom:3.125rem;
-    /*width: 135px;*/
-    /*margin-bottom: 50px;*/
+    margin-bottom: 3.125rem;
 }
 
-.feedback-img img{
+.feedback-img img {
     max-width: 100%;
 }
 
 .feedback p {
-    font: 1.5rem "OpenSans Semibold", sans-serif;
+    font: 1.5rem "Open Sans Semi-Bold", sans-serif;
     color: #3a3f4b;
     line-height: 1.25em;
     margin-bottom: 1.666em;
     height: 3.75em;
     overflow-y: auto;
-    /*font: 24px "OpenSans Semibold", sans-serif;*/
-    /*line-height: 30px;*/
-    /*margin-bottom: 40px;*/
 }
 
 .feedback .signature {
-    font: 1.125rem "OpenSans Semibold", sans-serif;
+    font: 1.125rem "Open Sans Semi-Bold", sans-serif;
     margin-bottom: 0;
-    /*font: 18px "OpenSans Semibold", sans-serif;*/
 }
 
 .feedback p a {
@@ -407,9 +420,8 @@ ol, ul {
 .arrow {
     display: inline-block;
     height: 1.875rem;
-    width:1.875rem;
+    width: 1.875rem;
     fill: #8897a9;
-    /*height: 30px;*/
 }
 
 .arrow:hover {
@@ -418,24 +430,20 @@ ol, ul {
 }
 
 .next-feedback, .previous-feedback {
-    display:block;
+    display: block;
     width: 18.729%;
     position: absolute;
     top: 4.4252%;
     -webkit-animation: feedback-animation 1s;
     animation: feedback-animation 1s;
-    /*width: 109px;*/
-    /*top: 15px;*/
 }
 
 .next-feedback {
     right: 6%;
-    /*right: 35px;*/
 }
 
 .previous-feedback {
     left: 6%;
-    /*left: 35px;*/
 }
 
 .next-feedback .feedback-img,
@@ -446,31 +454,26 @@ ol, ul {
 }
 
 .next-feedback p, .previous-feedback p {
-    display:none;
+    display: none;
 }
 
 #contactus {
-    padding-top: 84px;
-    padding-bottom: 68px;
+    padding-top: 5.25rem;
+    padding-bottom: 4.25rem;
     background-color: #3b404c;
     position: relative;
-    /*padding-top: 84px;*/
-    /*padding-bottom: 68px;*/
 }
 
 .footer-navigation {
-    margin-bottom: 113px;
-    /*margin-bottom: 113px;*/
+    margin-bottom: 5.65em;
 }
 
 .footer-navigation h3 {
     float: left;
-    font: 2.0625rem "Lora Bold", sans-serif;
-    color:#ffffff;
+    font: 2.0625rem "Lora Bold", serif;
+    color: #ffffff;
     text-transform: capitalize;
     padding-left: 0.3788em;
-    /*font: 33px "Lora Bold", sans-serif;*/
-    /*padding-left: 12.5px;*/
 }
 
 .footer-navigation ul {
@@ -480,10 +483,8 @@ ol, ul {
 .footer-navigation ul li {
     display: inline-block;
     margin-right: 1.6em;
-    font: 1.25rem "OpenSans", sans-serif;
+    font: 1.25rem "Open Sans", sans-serif;
     border-bottom: 1px solid transparent;
-    /*margin-right: 32px;*/
-    /*font: 20px "OpenSans", sans-serif;*/
 }
 
 .footer-navigation ul li:hover {
@@ -491,72 +492,63 @@ ol, ul {
 }
 
 .footer-navigation ul li:hover a {
-   color: #00a5ff;
+    color: #00a5ff;
 }
 
 .footer-navigation ul li a {
     display: block;
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
     padding: 0.375em 0;
-    /*padding: 7.5px 0;*/
 }
 
 .contacts {
-    float:left;
-    width:26.2618%;
-    /*width:307px;*/
+    float: left;
+    width: 26.2618%;
 }
 
 .contactus-form {
     float: right;
     width: 65.5261%;
-    /*width: 766px;*/
 }
 
 .contacts-block {
+    margin: 0 auto;
     margin-bottom: 4.125rem;
-    /*margin-bottom: 66px;*/
 }
 
 .contacts-block h4 {
-    font: 1.5rem "OpenSans Semibold", sans-serif;
+    font: 1.5rem "Open Sans Semi-Bold", sans-serif;
     text-transform: uppercase;
     color: #ffffff;
     margin-bottom: 1.08333em;
-    /*font: 24px "OpenSans Semibold", sans-serif;*/
-    /*margin-bottom: 26px;*/
 }
 
 .contacts-block p {
-    font: 1.125rem "OpenSans", sans-serif;
+    font: 1.125rem "Open Sans", sans-serif;
     line-height: 1.33333em;
     color: #999999;
-    /*font: 18px "OpenSans", sans-serif;*/
-    /*line-height: 24px;*/
 }
+
 .contactus-form fieldset {
     font-size: 0;
 }
 
 .contactus-form .field {
     display: inline-block;
-    width:47.128%;
+    width: 47.128%;
     font-size: 0;
     margin-right: 5.744%;
     margin-bottom: 3.6875rem;
-    /*width:361px;*/
-    /*margin-right: 44px;*/
-    /*margin-bottom: 59px;*/
 }
 
-.contactus-form .field:nth-child(2){
+.contactus-form .field:nth-child(2) {
     margin-right: 0;
 }
 
 .contactus-form input {
     width: 100%;
-    font: 1.25rem "OpenSans", sans-serif;
+    font: 1.25rem "Open Sans", sans-serif;
     border: none;
     padding: 0.4em 0;
     padding-left: 1.2em;
@@ -565,9 +557,6 @@ ol, ul {
     outline: none;
     color: #ffffff;
     box-sizing: border-box;
-    /*padding: 8px 0;*/
-    /*padding-left: 24px;*/
-    /*font: 20px "OpenSans", sans-serif;*/
 }
 
 .contactus-form input:focus, .contactus-form textarea:focus {
@@ -576,17 +565,15 @@ ol, ul {
 
 .contactus-form label {
     display: block;
-    font: 1.5rem "OpenSans", sans-serif;
+    font: 1.5rem "Open Sans", sans-serif;
     padding-bottom: 0.83333em;
     text-transform: capitalize;
     color: #ffffff;
-    /*font: 24px "OpenSans", sans-serif;*/
-    /*padding-bottom: 20px;*/
 }
 
 .contactus-form textarea {
     width: 100%;
-    font: 1.25rem "OpenSans", sans-serif;
+    font: 1.25rem "Open Sans", sans-serif;
     border: none;
     border-bottom: 1px solid #7a7b7f;
     background-color: transparent;
@@ -594,31 +581,27 @@ ol, ul {
     color: #ffffff;
     resize: none;
     margin-bottom: 2.25rem;
-    /*font: 20px "OpenSans", sans-serif;*/
-    /*margin-bottom: 36px;*/
 }
 
 .contactus-form-btn {
-    font: 1.5625rem "OpenSans Semibold", sans-serif;
+    font: 1.5625rem "Open Sans Semi-Bold", sans-serif;
     padding: 0.88em 0;
     color: #ffffff;
     width: 11.2em;
     border: none;
     background-color: #7a7b7f;
-    /*font: 25px "OpenSans Semibold", sans-serif;*/
-    /*width: 280px;*/
-    /*padding: 22px 0;*/
 }
-.contactus-form-btn_active  {
+
+.contactus-form-btn_active {
     background-color: #00a5ff;
 }
 
 .pointer {
     display: none;
-    width: 65px;
-    height: 65px;
+    width: 4.0625rem;
+    height: 4.0625rem;
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
     border-radius: 50%;
@@ -628,8 +611,8 @@ ol, ul {
 
 .icon {
     display: inline-block;
-    width: 17px;
-    height: 10px;
+    width: 1.0625rem;
+    height: 0.625rem;
     stroke-width: 0;
     stroke: #fff;
     fill: #fff;
@@ -638,32 +621,26 @@ ol, ul {
 
 .copyright {
     padding: 1.875rem 0;
-    /*padding: 30px 0;*/
 }
 
 .copyright .copyright-text {
     float: left;
-    font: 0.8125rem "Montserrat Regular", sans-serif;
+    font: 0.8125rem "Montserrat Normal", sans-serif;
     line-height: 2.3077em;
     color: #999999;
-    /*font: 13px "Montserrat Regular", sans-serif;*/
-    /*line-height: 30px;*/
 }
 
 .copyright .social-block {
-     float:right;
- }
+    float: right;
+}
 
 .copyright .social-block a {
     display: inline-block;
-    width:1.875rem;
-    height:1.875rem;
-    margin-right:0.75rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    margin-right: 0.75rem;
     font-size: 0;
     text-decoration: none;
-    /*width:30px;*/
-    /*height:30px;*/
-    /*margin-right:12px;*/
 }
 
 .copyright .social-block a:last-child {
@@ -679,15 +656,348 @@ ol, ul {
     fill: #00a5ff;
 }
 
-/*@-webkit-keyframes feedback-animation {*/
-    /*0%   { opacity: 0; }*/
-    /*100% { opacity: 1; }*/
-/*}*/
+@-webkit-keyframes feedback-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 @keyframes feedback-animation {
-    from { opacity: 0;}
-to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+
+@media screen and (max-width: 1021px) {
+    html, body {
+        font-size: 0.9rem;
+    }
+
+    .content-centerer {
+        width: 90%;
+    }
+
+    .main-navigation .menu-desktop {
+        font-size: 0.97rem;
+    }
+
+    .service-item p {
+        font-size: 0.833rem;
+    }
+
+    .portfolio-navigation ul {
+        font-size: 0.971rem;
+    }
+
+    .copyright .social-block a {
+        width: 2.0625rem;
+        height: 2.0625rem;
+        margin-right: 0.825rem;
+    }
+}
+
+@media screen and (max-width: 853px) {
+    html, body {
+        font-size: 0.8rem;
+    }
+
+    .main-navigation .menu-desktop {
+        font-size: 1.067rem;
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-navigation ul {
+        font-size: 1.0681rem;
+    }
+
+    .feedbacks-block {
+        width: 70%;
+    }
+
+    .copyright .social-block a {
+        width: 2.26875rem;
+        height: 2.26875rem;
+        margin-right: 0.9075rem;
+    }
+}
+
+@media screen and (max-width: 758px) {
+    html, body {
+        font-size: 0.7rem;
+    }
+
+    .main-navigation .menu-desktop {
+        font-size: 1.1856rem;
+    }
+
+    .main-navigation .menu-desktop li a {
+        padding-top: 0.5rem;
+    }
+
+    .services-block {
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    .service-item {
+        width: 35%;
+    }
+
+    .service-item p {
+        font-size: 1rem;
+    }
+
+    .portfolio-navigation ul {
+        font-size: 1.1868rem;
+    }
+
+    .copyright .social-block a {
+        width: 2.4956rem;
+        height: 2.4956rem;
+        margin-right: 0.99825rem;
+    }
+}
+
+@media screen and (max-width: 669px) {
+    html, body {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 571px) {
+
+    .main-navigation .menu-desktop li {
+        margin-right: 3em;
+    }
+
+    .block-header {
+        font: 2.3rem "Lora Bold", serif;
+    }
+
+    .services-block {
+        width: 100%;
+    }
+
+    .service-item {
+        width: 45%;
+    }
+
+    .portfolio-block {
+        justify-content: space-around;
+    }
+
+    .portfolio-item {
+        width: 45%;
+    }
+
+    .brand-icon {
+        width: 26%;
+    }
+
+    .feedbacks-block {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 504px) {
+    .block-header {
+        font: 2rem "Lora Bold", serif;
+    }
+
+    .services-block {
+        margin: 4.1875rem auto 2.0625rem;
+    }
+}
+
+@media screen and (max-width: 437px) {
+
+    .main-navigation .menu-desktop {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-block;
+    }
+
+    .menu-wrapper .menu-mobile {
+        display: block;
+    }
+
+    .main-navigation:hover .menu-wrapper {
+        display: block;
+    }
+
+    .navigation-logo {
+        padding-top: 1.15vh;
+    }
+
+    .portfolio-navigation ul li {
+        margin-right: 2.5em;
+    }
+
+    .showMoreBtn {
+        margin-bottom: 2.875rem;
+    }
+
+    .content-centerer {
+        width: 95%;
+    }
+
+    .brands-block {
+        margin: 2.875rem auto 2.875rem;
+    }
+
+    .feedbacks {
+        padding-bottom: 0;
+    }
+
+    #contactus {
+        padding-top: 2.875rem;
+        padding-bottom: 2.875rem;
+    }
+
+    .contacts {
+        float: none;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .contactus-form {
+        float: none;
+        width: 100%;
+    }
+
+    .contacts-block {
+        text-align: center;
+        margin-bottom: 2.875rem;
+    }
+
+    .contacts-block:first-child {
+        width: 40%;
+    }
+
+    .contacts-block h4 {
+        margin-bottom: 1.08333em;
+    }
+
+}
+
+@media screen and (max-width: 416px) {
+
+    .footer-navigation {
+        text-align: center;
+    }
+
+    .footer-navigation h3 {
+        float: none;
+        padding: 0;
+    }
+
+    .footer-navigation ul {
+        float: none;
+        margin-bottom: 2rem;
+    }
+
+    .contacts {
+        flex-flow: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #contactus .content-centerer {
+        width: 90%
+    }
+
+    .contacts .contacts-block {
+        width: 90%;
+    }
+
+    .contactus-form .field {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .brands .block-header {
+        font-size: 1.8rem;
+    }
+
+    .feedbacks .block-header {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    html, body {
+        font-size: 0.5rem;
+    }
+
+    .service-item {
+        width: 60%;
+    }
+
+    .service-item p {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-navigation ul li {
+        margin-right: 1.5em;
+    }
+
+    .portfolio-item {
+        width: 70%;
+    }
+
+    .brands-block {
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    .brand-icon {
+        width: 35%;
+    }
+
+    .contacts-block p {
+        font: 1.2499rem/1.4814em "Open Sans", sans-serif;
+        color: #999;
+    }
+
+    .copyright .social-block a {
+        width: 2.7729rem;
+        height: 2.7729rem;
+        margin-right: 1.0981rem;
+    }
+
+    .copyright .copyright-text {
+        font: 1rem/2.7729em "Montserrat Normal", sans-serif;
+
+    }
+}
+
+@media screen and (max-width: 316px) and (min-width: 0px) {
+    .page-container {
+        min-width: 316px;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 

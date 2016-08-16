@@ -5,6 +5,9 @@
     var arrayOfBullets = document.querySelectorAll(".bullet");
     var contactUsFormBtn = document.querySelector(".contactus-form-btn");
     var contactUsForm = document.querySelector(".contactus-form");
+    var contactUsFormName = document.querySelector("#name");
+    var contactUsFormSublect = document.querySelector("#subject");
+    var contactUsFormMessage = document.querySelector("#message");
     var pointer = document.querySelector(".pointer");
     var currentFeedback;
     var nextFeedback;
@@ -14,7 +17,7 @@
     console.log(indexOfCurrentFeedback);
     feedbacksShow(indexOfCurrentFeedback);
 
-    function feedbacksShow(indexOfCurrentFeedback) {
+    function feedbacksShow(indexOfCurrentFeedback, formerFeedback) {
         var indexOfPreviousFeedback = indexOfCurrentFeedback - 1;
         var indexOfNextFeedback = indexOfCurrentFeedback + 1;
         if (indexOfCurrentFeedback === 0) {
@@ -27,14 +30,16 @@
         previousFeedback = arrayOfFeedbacks[indexOfPreviousFeedback];
         setTimeout(function () {
             currentFeedback.classList.add("current-feedback");
+            formerFeedback&&formerFeedback.classList.remove('former-feedback');
             nextFeedback.classList.add("next-feedback");
             previousFeedback.classList.add("previous-feedback");
-        }, 0)
+        }, 15)
     }
 
     arrowPrevious.addEventListener("click", function (event) {
         event.preventDefault();
         currentFeedback.classList.remove("current-feedback");
+        currentFeedback.classList.add('former-feedback');
         nextFeedback.classList.remove("next-feedback");
         previousFeedback.classList.remove("previous-feedback");
 
@@ -43,13 +48,14 @@
             indexOfCurrentFeedback = arrayOfFeedbacks.length - 1;
         }
         console.log("hi");
-        feedbacksShow(indexOfCurrentFeedback);
+        feedbacksShow(indexOfCurrentFeedback, currentFeedback);
     });
 
     arrowNext.addEventListener("click", function (event) {
         event.preventDefault();
 
         currentFeedback.classList.remove("current-feedback");
+        currentFeedback.classList.add('former-feedback');
         nextFeedback.classList.remove("next-feedback");
         previousFeedback.classList.remove("previous-feedback");
 
@@ -58,23 +64,34 @@
             indexOfCurrentFeedback = 0;
         }
         console.log("hi");
-        feedbacksShow(indexOfCurrentFeedback);
+        feedbacksShow(indexOfCurrentFeedback, currentFeedback);
     });
 
     changeColorContactUsFormBtn();
 
+    function focusIn(event){
+        event.preventDefault();
+        contactUsFormBtn.classList.add("contactus-form-btn_active");
+        pointer.style.display = 'block';
+    }
+
+    function focusOut(event){
+        event.preventDefault();
+        contactUsFormBtn.classList.remove("contactus-form-btn_active");
+        pointer.style.display = 'none';
+    }
+
+
+
     function changeColorContactUsFormBtn () {
 
-        contactUsForm.addEventListener("focusin", function (event) {
-            event.preventDefault();
-            contactUsFormBtn.classList.add("contactus-form-btn_active");
-            pointer.style.display = 'block';
-        });
-        contactUsForm.addEventListener("focusout", function (event) {
-            event.preventDefault();
-            contactUsFormBtn.classList.remove("contactus-form-btn_active");
-            pointer.style.display = 'none';
-        });
+        contactUsFormName.addEventListener("focus", focusIn);
+        contactUsFormName.addEventListener("blur", focusOut);
+        contactUsFormSublect.addEventListener("focus", focusIn);
+        contactUsFormSublect.addEventListener("blur", focusOut);
+        contactUsFormMessage.addEventListener("focus", focusIn);
+        contactUsFormMessage.addEventListener("blur", focusOut);
+
     }
 
 }());
